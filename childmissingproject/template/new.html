@@ -1,0 +1,57 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="home-head">
+       <div class="navimg">
+            <img class="navimage" src="{% static 'images/nav logo.png' %}" alt="nav logo">
+        </div>
+        <div class="navheading">
+            <h3>TRACK THE MISSING CHILD</h3>
+        </div> 
+        {% comment %} <div class="loginbtn">
+            <a class="login" href="login_view">login</a>
+        </div> {% endcomment %}
+        {% comment %} <div class="regbtn">
+            <a class="login" href="register">register</a>
+        </div> {% endcomment %}
+    </div>
+    <a href="/"><img class="log-img" src="{% static 'images/nav logo.png' %}"></a>
+    <div class="new_page_div">
+        <h3 class='newh3'>Welcome To The Portal Of Track The Missing Child</h3>
+        <h5 class="newh5">We Need To Know That You Are complainant Or User?</h5>
+        <div class="new_page_button_div">
+            <a id="new_page_link_com" class="btn btn-outline-danger" href="complainant">Complainant</a>
+            <a id="new_page_link_user" class="btn btn-outline-danger" href="user">User</a>
+        </div>
+    </div>
+    <h3 class="tbheading">History Of Your Missing Children</h3>
+    <table class="tb1">
+        <tr>
+            <th>Child Name</th>
+            <th>Age</th>
+            <th>Gender</th>
+            <th>Status</th>
+        </tr>
+        {% for i in com %}
+        <tr>
+            <td style="color:yellow; text-align:center">{{i.child_name}}</td>
+            <td style="color:yellow; text-align:center">{{i.age}}</td>
+            <td style="color:yellow; text-align:center">{{i.gender}}</td>
+            <td style="color:yellow; text-align:center">{{i.staus}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>

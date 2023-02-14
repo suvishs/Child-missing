@@ -1,0 +1,40 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="home-head">
+       <div class="navimg">
+            <img class="navimage" src="{% static 'images/nav logo.png' %}" alt="nav logo">
+        </div>
+        <div class="navheading">
+            <h3>TRACK THE MISSING CHILD</h3>
+        </div> 
+       <div class="loginbtn">
+            <a class="login" href="login_view">login</a>
+        </div> 
+        <div class="regbtn">
+            <a class="login" href="register">register</a>
+        </div>
+    </div>
+    <div class="homeimgdiv">
+        <img class="home-img" src="{% static 'images/nav logo.png' %}">
+    </div>
+    <div class="container">
+        <h2 class="home-about">About Us</h2>
+        <p>The Ministry of Women and Child Development is implementing a Centrally Sponsored Scheme, namely the Integrated Child Protection Scheme (ICPS) since 2009-10. The objectives of the scheme are to contribute to the improvement in the well being of children in difficult circumstances, as well as to the reduction of vulnerabilities to situations and actions that lead to abuse, neglect, exploitation, abandonment and separation of children. The Scheme, also envisages for creating a mechanism for tracking 'missing' and 'found' children under ICPS and Juvenile Justice (Care & Protection of Children) Act,2000 ( JJ Act). Therefore, this Ministry had entrusted National Informatics Centre (NIC) to develop a national portal TrackChild which not only have data on 'missing' children but it also have live database to monitor the progress of the 'found' children who are availing various services in different Child Care Institutions (CCIs) under the ICPS and the JJ Act.
+            TrackChild portal has been designed and developed adhering to the guidelines provided in the Juvenile Justice (Care and Protection of Children) Act, 2000 and Model Rules 2007 and the provisions laid down in the Integrated Child Protection Scheme (ICPS). One of the tasks entrusted under ICPS to the State Governments is the setting up of a child tracking system which will facilitate data entry and matching of missing and found children, and also enable follow up of the progress of children who are beneficiaries of the Scheme. Thus, proper monitoring and welfare of the children under the Scheme would also be ensured through the portal. The Homes, Child Welfare Committees are being equipped with computers; staff etc. to facilitate data entry of the children under ICPS.</p>
+
+    </div>
+</body>
+</html>
